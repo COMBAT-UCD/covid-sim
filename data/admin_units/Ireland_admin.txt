@@ -10,8 +10,7 @@
 
 
 [Population size]
-5405172
-[ONS pop proj]
+4937796
 
 [Fix population size at specified value]
 1
@@ -26,35 +25,9 @@ Ireland
 0
 
 [List of level 1 administrative units to include]
-Carlow	Cavan	Clare	Cork	Donegal	Dublin	Galway	Kerry	Kildare	Kilkenny	Laoighis	Leitrim	Limerick	Longford	Louth	Mayo	Meath	Monaghan	Offaly	Roscommon	Sligo	Tipperary	Waterford	Westmeath	Wexford	Wicklow
-
+Ireland
 [Codes and country/province names for admin units]
-280100	Ireland	Carlow
-280200	Ireland	Cavan
-280300	Ireland	Clare
-280400	Ireland	Cork
-280500	Ireland	Donegal
-280600	Ireland	Dublin
-280700	Ireland	Galway
-280800	Ireland	Kerry
-280900	Ireland	Kildare
-281000	Ireland	Kilkenny
-281100	Ireland	Laoighis
-281200	Ireland	Leitrim
-281300	Ireland	Limerick
-281400	Ireland	Longford
-281500	Ireland	Louth
-281600	Ireland	Mayo
-281700	Ireland	Meath
-281800	Ireland	Monaghan
-281900	Ireland	Offaly
-282000	Ireland	Roscommon
-282100	Ireland	Sligo
-282200	Ireland	Tipperary
-282300	Ireland	Waterford
-282400	Ireland	Westmeath
-282500	Ireland	Wexford
-282600	Ireland	Wicklow
+210100	Ireland	Ireland
 
 [Mask for level 1 administrative units]
 100000

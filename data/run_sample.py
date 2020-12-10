@@ -84,6 +84,7 @@ united_states = [ "United_States" ]
 canada = [ "Canada" ]
 usa_territories = ["Alaska", "Hawaii", "Guam", "Virgin_Islands_US", "Puerto_Rico", "American_Samoa"]
 nigeria = ["Nigeria"]
+ireland = ["Ireland"]
 
 # Determine whether we need to build the tool or use a user supplied one:
 if args.covidsim is not None:
@@ -130,6 +131,8 @@ elif args.country in usa_territories:
     wpop_file_root = "us_terr"
 elif args.country in nigeria:
     wpop_file_root = "nga_adm1"
+elif args.country in ireland:
+	wpop_file_root = "ireland"
 else:
     wpop_file_root = "eur"
 
