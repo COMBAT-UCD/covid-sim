@@ -38,6 +38,8 @@ OUTPUT_AgeInc			<- TRUE
 
 SeverityVariablesToPlot <- c("incSARI", "incCritical", "SARI", "Critical", "incDeath", "cumSARI", "cumCritical")
 
+options(scipen = 10)
+
 #### Set up ####
 if (!require(sp))
 {
