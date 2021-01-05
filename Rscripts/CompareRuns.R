@@ -46,6 +46,7 @@ R <- 2.2
 # default console output width
 defaultOutputWidth <- 172L
 
+options(scipen = 10)
 
 #### Set up ####
 

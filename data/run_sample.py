@@ -132,7 +132,7 @@ elif args.country in usa_territories:
 elif args.country in nigeria:
     wpop_file_root = "nga_adm1"
 elif args.country in ireland:
-	wpop_file_root = "ireland"
+    wpop_file_root = "ireland"
 else:
     wpop_file_root = "eur"
 
@@ -185,6 +185,7 @@ if not os.path.exists(no_int_file):
 # Configure an intervention (controls) parameter file.
 # In reality you will run CovidSim many times with different parameter
 # controls.
+#control_roots = [ "PC7_CI_HQ_SD", "PC", "CI", "HQ" ]
 control_roots = [ "PC7_CI_HQ_SD" ]
 for root in control_roots:
     cf = os.path.join(args.paramdir, "p_{0}.txt".format(root))

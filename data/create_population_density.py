@@ -46,7 +46,7 @@ with open("./populations/Ireland.txt", "w") as output_file:
 			
 			if mcell_pop > 0:
 				## Longitude	Latitude	population of cell	country code	admin code
-				output_file.write(str(round(long, 5)) + "	" + str(round(lat, 5)) + "	" + str(int(round(mcell_pop))) + "	" + "21" + "	" + "210100\n")
+				output_file.write(str(round(long, 5)) + "	" + str(round(lat, 5)) + "	" + str(mcell_pop) + "	" + "21" + "	" + "210100\n")
 				# LOOK INTO ROUNDING OF POPULATION
 			
 			lat += MICROCELL_SIZE

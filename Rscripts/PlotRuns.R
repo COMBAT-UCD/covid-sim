@@ -169,7 +169,7 @@ for (SubFolder in VariousSubFolders)
 					lines(Dates, SeverityResults$R, col = "yellow"	, lwd = LWD)
 					lines(Dates, SeverityResults$cumDeath, col = "black"	, lwd = LWD)
 					axis.Date(1, at=seq(min(Dates), max(Dates), by = "months"), format="%b", las = 2)
-					legend ("topright", legend = c("Susceptible", "Infectious", "Recovered", "Dead"), col = c("green", "red", "yellow", "black"), lty = 1, pch = NA, lwd = LWD, cex = 1)
+					legend ("topright", legend = c("Susceptible", "Infectious", "Recovered", "Dead"), col = c("green", "red", "yellow", "black"), lty = 1, pch = NA, lwd = LWD, cex = 0.7)
 					dev.off()
 				}
 
@@ -194,7 +194,7 @@ for (SubFolder in VariousSubFolders)
 					lines(Dates_tmp, SeverityResults_tmp$incDeath	, col = "black"			, lwd = LWD)
 					#axis.Date(1, at=seq(min(Dates), max(Dates), by = "months"), format="%m-%Y", las = 2)
 					axis.Date(1, at=seq(min(Dates_tmp), max(Dates_tmp), by = "months"), format="%b", las = 2)
-					legend ("topright", legend = c("Mild", "ILI", "SARI", "Critical", "Dead"), col = c("pink", "palevioletred1", "orange", "red", "black"), lty = 1, pch = NA, lwd = LWD, cex = 1)
+					legend ("topright", legend = c("Mild", "ILI", "SARI", "Critical", "Dead"), col = c("pink", "palevioletred1", "orange", "red", "black"), lty = 1, pch = NA, lwd = LWD, cex = 0.7)
 					dev.off()
 
 					#### Do deaths only
@@ -274,7 +274,7 @@ for (SubFolder in VariousSubFolders)
 						res = PNG_res, units = "in", width = 10, height = 10)
 				barplot(t(WeeklyInc), col = rev(bpy.colors(9)), #xaxt = "n",
 						las = 2, main = paste0(Scenario, "\nWeekly ", CaseOrDeath_long, " by age"))
-				legend("topright", legend = colnames(CumCases_10yBands), col = rev(bpy.colors(9)), lty = NA, pch = 15, lwd = LWD, cex = 1)
+				legend("topright", legend = colnames(CumCases_10yBands), col = rev(bpy.colors(9)), lty = NA, pch = 15, lwd = LWD, cex = 0.7)
 				dev.off()
 			}
 		}
@@ -344,15 +344,15 @@ for (SubFolder in VariousSubFolders)
 								#main = paste0(Scenario, "\n",
 								#		InfVariableStringLong, " ", IncPrevOrCumIncString, " by admin unit (level ", AdLevelToPlot, ")"),
 								col = Cols[1], type = "l", lwd = LWD, xaxt = "n", xlab = "",
-								ylab = "", ylim = c(0, maxYaxis), cex.axis = 1.7, cex.lab = 1.7)
-						mtext(YLAB, side = 2, cex = 2, line = 2.6)
+								ylab = "", ylim = c(0, maxYaxis), cex.axis = 0.7, cex.lab = 0.7)
+						mtext(YLAB, side = 2, cex = 0.7, line = 2.6)
 						if (dim(AdUnitResults_tmp)[2] > 1)
 							for (Index in 2:(MaxAdUnit - MinAdUnit))
 								lines(Dates_tmp, AdUnitResults_tmp[,Index], col = Cols[Index], lwd = LWD)
 						axis.Date(1, at = seq(min(Dates_tmp), max(Dates_tmp), by = "months"),
-								format = "%b", las = 2, cex.axis = 1.8)
+								format = "%b", las = 2, cex.axis = 0.7)
 
-						legend ("topleft", legend = AdminUnitNames, col = Cols, lty = 1, pch = NA, lwd = LWD, cex = 1.3)
+						legend ("topleft", legend = AdminUnitNames, col = Cols, lty = 1, pch = NA, lwd = LWD, cex = 0.7)
 						dev.off()
 
 					} else cat(paste0("Didn't output ", pngFileName, " as only zeros"))
