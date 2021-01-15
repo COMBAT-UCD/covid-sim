@@ -25,7 +25,7 @@ DefaultInFolder <- "."
 PlotOutputDirRelativeToBaseFolder <- c("Plots", "Comparisons")
 
 # Date range
-Day_0 <- as.Date("2020-01-01")
+#Day_0 <- as.Date("2020-01-01")
 NumDaysToPlot <- 186
 
 # resolution of output files
@@ -61,7 +61,8 @@ if (!require(sp)){
 
 # parse command line arguments
 args = commandArgs(trailingOnly=TRUE)
-InFolder <- if (length(args > 0)) args[1] else DefaultInFolder
+Day_0	<- if (length(args > 0)) as.Date(args[1]) else as.Date("2020-01-01")
+InFolder <- if (length(args > 1)) args[2] else DefaultInFolder
 CompPlotDir <- do.call(file.path, c(list(InFolder), as.list(PlotOutputDirRelativeToBaseFolder)))
 
 # Create comparison plot directory

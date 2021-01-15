@@ -24,7 +24,7 @@ VariousSubFolders <- "."
 PlotOutputDirRelativeToBaseFolder <- "Plots"
 
 # Date range
-Day_0 <- as.Date("2020-01-01")
+#Day_0 <- as.Date("2020-01-01")
 NumDaysToPlot <- 186
 
 # resolution of output files
@@ -51,7 +51,9 @@ if (!require(sp))
 
 # parse command line arguments
 args = commandArgs(trailingOnly=TRUE)
-BaseFolder 		<- if (length(args > 0)) args[1] else DefaultBaseFolder
+Day_0		<- if(length(args > 1))  as.Date(args[1]) else as.Date("2020-01-01")
+print(Day_0)
+BaseFolder 	<- if (length(args > 2)) args[2] else DefaultBaseFolder
 PlotOutputDir 	<- file.path(BaseFolder, PlotOutputDirRelativeToBaseFolder)
 
 #### Hardcoded values about the simulation API ####
